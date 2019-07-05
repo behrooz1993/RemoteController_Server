@@ -2,13 +2,13 @@
 
 namespace App\Repositories;
 
-use App\Models\User;
 use App\Repositories\BaseRepository;
+use App\Models\User;
 
 /**
  * Class UserRepository
  * @package App\Repositories
- * @version July 2, 2019, 5:15 am UTC
+ * @version July 2, 2019, 7:18 am UTC
 */
 
 class UserRepository extends BaseRepository
@@ -20,7 +20,7 @@ class UserRepository extends BaseRepository
         'first_name',
         'last_name',
         'mobile',
-        'pwd',
+        'password',
         'email'
     ];
 
@@ -40,5 +40,38 @@ class UserRepository extends BaseRepository
     public function model()
     {
         return User::class;
+    }
+
+    public function checkMobile(string $mobile)
+    {
+        return $this->model->where('mobile', $mobile)->first();
+    }
+
+    public function saveUser(string $mobile)
+    {
+        $user = User::create(['mobile' => $mobile]);
+        return $user;
+    }
+
+    public function saveActivationCode(User $user)
+    {
+        $user->activation_code = mt_rand(100000, 999999);
+        $user->save();
+        return $user;
+    }
+
+    public function checkActivationCode(User $user, string $code)
+    {
+        $activation = $user->where([
+            ['code', $code]
+        ])->latest('ttl')->first();
+        return $activation;
+    }
+
+    public function completeProfile(User $user, array $params)
+    {
+        
+        $user->update($params);
+        return $user;
     }
 }

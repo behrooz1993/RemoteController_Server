@@ -43,48 +43,10 @@
         "isIndex": true
     },
     {
-        "name": "last_name",
-        "dbType": "string,100:nullable",
-        "htmlType": "text",
-        "validations": "",
-        "searchable": true,
-        "fillable": true,
-        "inForm": true,
-        "isIndex": true
-    },
-    {
-        "name": "mobile",
-        "dbType": "string,15:nullable",
+        "name": "name",
+        "dbType": "string,200",
         "htmlType": "text",
         "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "inForm": true,
-        "isIndex": true
-    },
-    {
-        "name": "password",
-        "dbType": "string,255:nullable",
-        "htmlType": "text",
-        "validations": "",
-        "searchable": true,
-        "fillable": true,
-        "inForm": true
-    },
-    {
-        "name": "activation_code",
-        "dbType": "string,6:nullable",
-        "htmlType": "",
-        "validations": "",
-        "searchable": false,
-        "fillable": false,
-        "inForm": false
-    },
-    {
-        "name": "email",
-        "dbType": "string,300:nullable",
-        "htmlType": "text",
-        "validations": "",
         "searchable": true,
         "fillable": true,
         "inForm": true,

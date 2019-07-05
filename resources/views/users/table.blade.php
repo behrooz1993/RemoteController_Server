@@ -4,7 +4,7 @@
             <th>First Name</th>
         <th>Last Name</th>
         <th>Mobile</th>
-        <th>Pwd</th>
+        <th>Password</th>
         <th>Activation Code</th>
         <th>Email</th>
             <th colspan="3">Action</th>
@@ -15,7 +15,7 @@
                 <td>{!! $user->first_name !!}</td>
             <td>{!! $user->last_name !!}</td>
             <td>{!! $user->mobile !!}</td>
-            <td>{!! $user->pwd !!}</td>
+            <td>{!! $user->password !!}</td>
             <td>{!! $user->activation_code !!}</td>
             <td>{!! $user->email !!}</td>
                 <td>

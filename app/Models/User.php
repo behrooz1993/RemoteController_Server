@@ -4,19 +4,21 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User
  * @package App\Models
- * @version July 2, 2019, 5:15 am UTC
+ * @version July 2, 2019, 7:18 am UTC
  *
  * @property string first_name
  * @property string last_name
  * @property string mobile
- * @property string pwd
+ * @property string password
  * @property string email
  */
-class User extends Model
+class User extends Authenticatable implements JWTSubject
 {
     use SoftDeletes;
 
@@ -30,7 +32,7 @@ class User extends Model
         'first_name',
         'last_name',
         'mobile',
-        'pwd',
+        'password',
         'email'
     ];
 
@@ -44,7 +46,7 @@ class User extends Model
         'first_name' => 'string',
         'last_name' => 'string',
         'mobile' => 'string',
-        'pwd' => 'string',
+        'password' => 'string',
         'activation_code' => 'string',
         'email' => 'string'
     ];
@@ -57,6 +59,26 @@ class User extends Model
     public static $rules = [
         'mobile' => 'required'
     ];
+
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 
     
 }

@@ -34,10 +34,10 @@
     <p>{!! $user->mobile !!}</p>
 </div>
 
-<!-- Pwd Field -->
+<!-- Password Field -->
 <div class="form-group">
-    {!! Form::label('pwd', 'Pwd:') !!}
-    <p>{!! $user->pwd !!}</p>
+    {!! Form::label('password', 'Password:') !!}
+    <p>{!! $user->password !!}</p>
 </div>
 
 <!-- Activation Code Field -->

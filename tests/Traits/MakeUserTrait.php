@@ -47,7 +47,7 @@ trait MakeUserTrait
             'first_name' => $fake->word,
             'last_name' => $fake->word,
             'mobile' => $fake->word,
-            'pwd' => $fake->word,
+            'password' => $fake->word,
             'activation_code' => $fake->word,
             'email' => $fake->word
         ], $userFields);

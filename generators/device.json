@@ -33,40 +33,22 @@
         "inIndex": false
     },
     {
-        "name": "user_id",
-        "dbType": "integer:unsigned:default,0:foreign,users,id",
+        "name": "device_type_id",
+        "dbType": "integer:unsigned:default,0:foreign,device_types,id",
         "htmlType": "",
-        "relation": "mt1,User,user_id,id",
-        "inForm": false
-    },
-    {
-        "name": "session",
-        "dbType": "string,255:nullable",
-        "htmlType": "",
-        "validations": "",
-        "searchable": false,
+        "relation": "mt1,DeviceType,device_type_id,id",
         "fillable": false,
         "inForm": false,
-        "isIndex": false
+        "searchable": true
     },
     {
-        "name": "useragent",
-        "dbType": "string,255:nullable",
-        "htmlType": "",
-        "validations": "",
-        "searchable": false,
-        "fillable": false,
-        "inForm": false,
-        "isIndex": false
-    },
-    {
-        "name": "fingerprint",
-        "dbType": "string,255:nullable",
-        "htmlType": "",
-        "validations": "",
-        "searchable": false,
-        "fillable": false,
-        "inForm": false,
+        "name": "name",
+        "dbType": "string,255",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "inForm": true,
         "isIndex": false
     }
 ]

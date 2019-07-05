@@ -13,9 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'prefix' => 'auth',
+], function ($router) {
+  // any route that should be behind authentication and showable to new users
+  // with incomplete profiles, goes here
+    Route::post('login', 'AuthAPIController@login')
+        ->middleware('throttle.login');
+    Route::post('verify', 'AuthAPIController@verify');
+    Route::post('complete-profile', 'AuthAPIController@completeProfile');
+    Route::post('tfa', 'AuthAPIController@secondFactor');
+    Route::get('refresh', 'AuthAPIController@refresh');
+    Route::get('logout', 'AuthAPIController@logout');
 });
+
+
+
 
 
 

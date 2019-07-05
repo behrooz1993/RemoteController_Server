@@ -16,9 +16,9 @@ class CreateSessionsTable extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->default(0);
-            $table->string('session', 255);
-            $table->string('useragent', 255);
-            $table->string('fingerprint', 255);
+            $table->string('session', 255)->nullable();
+            $table->string('useragent', 255)->nullable();
+            $table->string('fingerprint', 255)->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('user_id')->references('id')->on('users');
