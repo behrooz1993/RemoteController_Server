@@ -42,3 +42,9 @@ Route::group([
 Route::resource('users', 'UserAPIController');
 
 Route::resource('sessions', 'SessionAPIController');
+
+Route::resource('device_types', 'DeviceTypeAPIController');
+
+Route::resource('devices', 'DeviceAPIController');
+
+Route::resource('instances', 'InstanceAPIController');

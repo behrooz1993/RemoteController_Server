@@ -43,3 +43,9 @@ Route::get('/home', 'HomeController@index');
 Route::resource('users', 'UserController');
 
 Route::resource('sessions', 'SessionController');
+
+Route::resource('deviceTypes', 'DeviceTypeController');
+
+Route::resource('devices', 'DeviceController');
+
+Route::resource('instances', 'InstanceController');
