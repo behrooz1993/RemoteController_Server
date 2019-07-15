@@ -1,0 +1,51 @@
+[
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "attribute_id",
+        "dbType": "integer:unsigned:default,0:foreign,attributes,id",
+        "htmlType": "",
+        "relation": "mt1,Attribute,attribute_id,id",
+        "fillable": false,
+        "inForm": false,
+        "searchable": true
+    },
+    {
+        "name": "attributable_id",
+        "dbType": "integer:unsigned:default,0",
+        "htmlType": "",
+        "relation": "",
+        "fillable": false,
+        "inForm": false,
+        "searchable": true
+    },
+    {
+        "name": "attributable_type",
+        "dbType": "string,255",
+        "htmlType": "",
+        "relation": "",
+        "fillable": false,
+        "inForm": false,
+        "searchable": false
+    }
+]

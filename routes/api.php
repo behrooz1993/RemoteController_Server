@@ -48,3 +48,13 @@ Route::resource('device_types', 'DeviceTypeAPIController');
 Route::resource('devices', 'DeviceAPIController');
 
 Route::resource('instances', 'InstanceAPIController');
+
+
+
+Route::resource('attribute_groups', 'AttributeGroupAPIController');
+
+
+
+Route::resource('attributes', 'AttributeAPIController');
+
+Route::resource('attributables', 'AttributableAPIController');

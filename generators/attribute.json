@@ -33,25 +33,6 @@
         "inIndex": false
     },
     {
-        "name": "first_name",
-        "dbType": "string,100:nullable",
-        "htmlType": "text",
-        "validations": "",
-        "searchable": true,
-        "fillable": true,
-        "inForm": true,
-        "isIndex": true
-    },
-    {
-        "name": "attribute_group_id",
-        "dbType": "integer:unsigned:default,0:foreign,attribute_groups,id",
-        "htmlType": "",
-        "relation": "mt1,AttributeGroup,attrubute_group_id,id",
-        "fillable": false,
-        "inForm": false,
-        "searchable": true
-    },
-    {
         "name": "name",
         "dbType": "string,200",
         "htmlType": "text",
