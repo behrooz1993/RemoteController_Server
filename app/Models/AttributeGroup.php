@@ -45,5 +45,8 @@ class AttributeGroup extends Model
         'name' => 'required'
     ];
 
-    
+    public function attributes()
+    {
+        return $this->hasMany(\App\Models\Attribute::class, 'attribute_group_id', 'id');
+    }
 }

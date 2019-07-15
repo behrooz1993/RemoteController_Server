@@ -54,4 +54,13 @@ class Device extends Model
     {
         return $this->belongsTo(\App\Models\DeviceType::class, 'device_type_id', 'id');
     }
+
+    public function instances()
+    {
+        return $this->hasMany(\App\Models\Instance::class, 'device_id', 'id');
+    }
+
+    public function attributes() {
+        return $this->morphToMany(\App\Models\Attribute, 'attributable');
+    }
 }

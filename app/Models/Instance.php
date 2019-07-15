@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Instance
  * @package App\Models
- * @version July 14, 2019, 5:26 pm UTC
+ * @version July 15, 2019, 7:46 am UTC
  *
  * @property \App\Models\Device device
  * @property string mobile
@@ -56,6 +56,6 @@ class Instance extends Model
      **/
     public function device()
     {
-        return $this->belongsTo(\App\Models\Device::class, 'device', 'id');
+        return $this->belongsTo(\App\Models\Device::class, 'device_id', 'id');
     }
 }

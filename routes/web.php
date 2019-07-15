@@ -48,7 +48,7 @@ Route::resource('deviceTypes', 'DeviceTypeController');
 
 Route::resource('devices', 'DeviceController');
 
-Route::resource('instances', 'InstanceController');
+
 
 
 
@@ -59,3 +59,5 @@ Route::resource('attributeGroups', 'AttributeGroupController');
 Route::resource('attributes', 'AttributeController');
 
 Route::resource('attributables', 'AttributableController');
+
+Route::resource('instances', 'InstanceController');

@@ -20,9 +20,7 @@
 <li class="nav-item {{ Request::is('devices*') ? 'active' : '' }}">
     <a class="nav-link" href="{!! route('devices.index') !!}"><i class="nav-icon icon-cursor"></i><span>Devices</span></a>
 </li>
-<li class="nav-item {{ Request::is('instances*') ? 'active' : '' }}">
-    <a class="nav-link" href="{!! route('instances.index') !!}"><i class="nav-icon icon-cursor"></i><span>Instances</span></a>
-</li>
+
 
 <li class="nav-item {{ Request::is('attributeGroups*') ? 'active' : '' }}">
     <a class="nav-link" href="{!! route('attributeGroups.index') !!}"><i class="nav-icon icon-cursor"></i><span>AttributeGroups</span></a>
@@ -33,4 +31,7 @@
 </li>
 <li class="nav-item {{ Request::is('attributables*') ? 'active' : '' }}">
     <a class="nav-link" href="{!! route('attributables.index') !!}"><i class="nav-icon icon-cursor"></i><span>Attributables</span></a>
+</li>
+<li class="nav-item {{ Request::is('instances*') ? 'active' : '' }}">
+    <a class="nav-link" href="{!! route('instances.index') !!}"><i class="nav-icon icon-cursor"></i><span>Instances</span></a>
 </li>

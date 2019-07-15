@@ -45,5 +45,16 @@ class Attribute extends Model
         'name' => 'required'
     ];
 
-    
+    public function attributeGroup()
+    {
+        return $this->belongsTo(\App\Models\AttributeGroup::class, 'attribute_group_id', 'id');
+    }    
+
+    public function deviceTypes() {
+        return $this->morphedByMany(\App\Models\DeviceType::class, 'attributable');
+    }
+
+    public function devices() {
+        return $this->morphedByMany(\App\Models\Device::class, 'attributable');
+    }
 }

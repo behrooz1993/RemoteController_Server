@@ -45,5 +45,12 @@ class DeviceType extends Model
         'name' => 'required'
     ];
 
-    
+    public function devices()
+    {
+        return $this->hasMany(\App\Models\Device::class, 'device_type_id', 'id');
+    }    
+
+    public function attributes() {
+        return $this->morphToMany(\App\Models\Attribute, 'attributable');
+    }
 }
