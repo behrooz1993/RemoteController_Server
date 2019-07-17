@@ -46,6 +46,12 @@
     <p>{!! $user->activation_code !!}</p>
 </div>
 
+<!-- Ttl Field -->
+<div class="form-group">
+    {!! Form::label('ttl', 'Ttl:') !!}
+    <p>{!! $user->ttl !!}</p>
+</div>
+
 <!-- Email Field -->
 <div class="form-group">
     {!! Form::label('email', 'Email:') !!}

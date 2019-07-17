@@ -34,9 +34,3 @@
     <p>{!! $session->useragent !!}</p>
 </div>
 
-<!-- Fingerprint Field -->
-<div class="form-group">
-    {!! Form::label('fingerprint', 'Fingerprint:') !!}
-    <p>{!! $session->fingerprint !!}</p>
-</div>
-

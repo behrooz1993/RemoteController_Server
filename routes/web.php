@@ -40,7 +40,39 @@ Route::get('/home', 'HomeController@index');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::resource('users', 'UserController');
+
+
+
+
 
 Route::resource('sessions', 'SessionController');
 
@@ -48,16 +80,18 @@ Route::resource('deviceTypes', 'DeviceTypeController');
 
 Route::resource('devices', 'DeviceController');
 
-
-
-
+Route::resource('instances', 'InstanceController');
 
 Route::resource('attributeGroups', 'AttributeGroupController');
 
 
 
+
+
+
+
 Route::resource('attributes', 'AttributeController');
 
-Route::resource('attributables', 'AttributableController');
+Route::resource('attributeValues', 'AttributeValueController');
 
-Route::resource('instances', 'InstanceController');
+Route::resource('attributables', 'AttributableController');

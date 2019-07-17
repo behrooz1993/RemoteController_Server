@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class AttributeGroupRepository
  * @package App\Repositories
- * @version July 15, 2019, 6:36 am UTC
+ * @version July 17, 2019, 6:15 pm UTC
 */
 
 class AttributeGroupRepository extends BaseRepository

@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class DeviceRepository
  * @package App\Repositories
- * @version July 14, 2019, 5:25 pm UTC
+ * @version July 17, 2019, 6:14 pm UTC
 */
 
 class DeviceRepository extends BaseRepository

@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class InstanceRepository
  * @package App\Repositories
- * @version July 15, 2019, 7:46 am UTC
+ * @version July 17, 2019, 6:15 pm UTC
 */
 
 class InstanceRepository extends BaseRepository
@@ -18,6 +18,7 @@ class InstanceRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'device_id',
+        'user_id',
         'serial'
     ];
 

@@ -33,10 +33,29 @@
         "inIndex": false
     },
     {
+        "name": "attribute_group_id",
+        "dbType": "integer:unsigned:default,0:foreign,attribute_groups,id",
+        "htmlType": "",
+        "relation": "mt1,AttributeGroup,attribute_group_id,id",
+        "fillable": true,
+        "inForm": true,
+        "searchable": true
+    },
+    {
         "name": "name",
         "dbType": "string,200",
         "htmlType": "text",
         "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "inForm": true,
+        "isIndex": true
+    },
+    {
+        "name": "permisson",
+        "dbType": "integer",
+        "htmlType": "number",
+        "validations": "default,1",
         "searchable": true,
         "fillable": true,
         "inForm": true,

@@ -22,6 +22,12 @@
     <p>{!! $instance->device_id !!}</p>
 </div>
 
+<!-- User Id Field -->
+<div class="form-group">
+    {!! Form::label('user_id', 'User Id:') !!}
+    <p>{!! $instance->user_id !!}</p>
+</div>
+
 <!-- Mobile Field -->
 <div class="form-group">
     {!! Form::label('mobile', 'Mobile:') !!}

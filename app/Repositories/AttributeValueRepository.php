@@ -2,24 +2,23 @@
 
 namespace App\Repositories;
 
-use App\Models\Attribute;
+use App\Models\AttributeValue;
 use App\Repositories\BaseRepository;
 
 /**
- * Class AttributeRepository
+ * Class AttributeValueRepository
  * @package App\Repositories
  * @version July 17, 2019, 6:19 pm UTC
 */
 
-class AttributeRepository extends BaseRepository
+class AttributeValueRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'attribute_group_id',
-        'name',
-        'permisson'
+        'attribute_id',
+        'value'
     ];
 
     /**
@@ -37,6 +36,6 @@ class AttributeRepository extends BaseRepository
      **/
     public function model()
     {
-        return Attribute::class;
+        return AttributeValue::class;
     }
 }

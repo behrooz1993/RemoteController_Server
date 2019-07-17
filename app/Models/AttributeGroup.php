@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class AttributeGroup
  * @package App\Models
- * @version July 15, 2019, 6:36 am UTC
+ * @version July 17, 2019, 6:15 pm UTC
  *
  * @property string name
  */
@@ -45,8 +45,5 @@ class AttributeGroup extends Model
         'name' => 'required'
     ];
 
-    public function attributes()
-    {
-        return $this->hasMany(\App\Models\Attribute::class, 'attribute_group_id', 'id');
-    }
+    
 }

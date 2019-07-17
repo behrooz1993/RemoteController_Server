@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Requests\API;
+namespace App\Http\Requests;
 
-use App\Models\Device;
-use InfyOm\Generator\Request\APIRequest;
+use Illuminate\Foundation\Http\FormRequest;
+use App\Models\AttributeValue;
 
-class UpdateDeviceAPIRequest extends APIRequest
+class CreateAttributeValueRequest extends FormRequest
 {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,6 +25,6 @@ class UpdateDeviceAPIRequest extends APIRequest
      */
     public function rules()
     {
-        return Device::$rules;
+        return AttributeValue::$rules;
     }
 }

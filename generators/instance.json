@@ -37,8 +37,17 @@
         "dbType": "integer:unsigned:default,0:foreign,devices,id",
         "htmlType": "",
         "relation": "mt1,Device,device_id,id",
-        "fillable": false,
-        "inForm": false,
+        "fillable": true,
+        "inForm": true,
+        "searchable": true
+    },
+    {
+        "name": "user_id",
+        "dbType": "integer:unsigned:default,0:foreign,users,id",
+        "htmlType": "",
+        "relation": "mt1,User,user_id,id",
+        "fillable": true,
+        "inForm": true,
         "searchable": true
     },
     {

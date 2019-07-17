@@ -81,6 +81,15 @@
         "inForm": false
     },
     {
+        "name": "ttl",
+        "dbType": "dateTime:nullable",
+        "htmType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "inForm": false
+    },
+    {
         "name": "email",
         "dbType": "string,300:nullable",
         "htmlType": "text",

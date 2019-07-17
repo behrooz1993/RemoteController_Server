@@ -6,25 +6,25 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Session
+ * Class AttributeValue
  * @package App\Models
- * @version July 17, 2019, 6:14 pm UTC
+ * @version July 17, 2019, 6:19 pm UTC
  *
- * @property \App\Models\User user
- * @property integer user_id
+ * @property \App\Models\Attribute attrubute
+ * @property string value
  */
-class Session extends Model
+class AttributeValue extends Model
 {
     use SoftDeletes;
 
-    public $table = 'sessions';
+    public $table = 'attribute_values';
     
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'user_id'
+        'value'
     ];
 
     /**
@@ -34,9 +34,8 @@ class Session extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'user_id' => 'integer',
-        'session' => 'string',
-        'useragent' => 'string'
+        'attribute_id' => 'integer',
+        'value' => 'string'
     ];
 
     /**
@@ -45,14 +44,14 @@ class Session extends Model
      * @var array
      */
     public static $rules = [
-        
+        'value' => 'required'
     ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function user()
+    public function attrubute()
     {
-        return $this->belongsTo(\App\Models\User::class, 'user_id', 'id');
+        return $this->belongsTo(\App\Models\Attribute::class, 'attrubute_id', 'id');
     }
 }

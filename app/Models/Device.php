@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Device
  * @package App\Models
- * @version July 14, 2019, 5:25 pm UTC
+ * @version July 17, 2019, 6:14 pm UTC
  *
  * @property \App\Models\DeviceType deviceType
+ * @property integer device_type_id
  * @property string name
  */
 class Device extends Model
@@ -24,6 +25,7 @@ class Device extends Model
 
 
     public $fillable = [
+        'device_type_id',
         'name'
     ];
 
@@ -53,14 +55,5 @@ class Device extends Model
     public function deviceType()
     {
         return $this->belongsTo(\App\Models\DeviceType::class, 'device_type_id', 'id');
-    }
-
-    public function instances()
-    {
-        return $this->hasMany(\App\Models\Instance::class, 'device_id', 'id');
-    }
-
-    public function attributes() {
-        return $this->morphToMany(\App\Models\Attribute, 'attributable');
     }
 }

@@ -15,9 +15,12 @@ class CreateAttributesTable extends Migration
     {
         Schema::create('attributes', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('attribute_group_id')->unsigned()->default(0);
             $table->string('name', 200);
+            $table->integer('permisson');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('attribute_group_id')->references('id')->on('attribute_groups');
         });
     }
 

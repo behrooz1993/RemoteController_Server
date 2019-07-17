@@ -6,11 +6,10 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
 /**
  * Class User
  * @package App\Models
- * @version July 2, 2019, 7:18 am UTC
+ * @version July 17, 2019, 6:12 pm UTC
  *
  * @property string first_name
  * @property string last_name
@@ -48,6 +47,7 @@ class User extends Authenticatable implements JWTSubject
         'mobile' => 'string',
         'password' => 'string',
         'activation_code' => 'string',
+        'ttl' => 'datetime',
         'email' => 'string'
     ];
 
@@ -60,7 +60,7 @@ class User extends Authenticatable implements JWTSubject
         'mobile' => 'required'
     ];
 
-    /**
+ /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
      * @return mixed
@@ -78,7 +78,5 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
-    }
-
-    
+    }    
 }

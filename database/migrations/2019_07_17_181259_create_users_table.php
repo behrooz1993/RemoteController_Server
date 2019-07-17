@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('mobile', 15)->nullable();
             $table->string('password', 255)->nullable();
             $table->string('activation_code', 6)->nullable();
+            $table->dateTime('ttl')->nullable();
             $table->string('email', 300)->nullable();
             $table->timestamps();
             $table->softDeletes();

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Requests\API;
+namespace App\Http\Requests;
 
-use App\Models\Attribute;
-use InfyOm\Generator\Request\APIRequest;
+use Illuminate\Foundation\Http\FormRequest;
+use App\Models\AttributeValue;
 
-class UpdateAttributeAPIRequest extends APIRequest
+class UpdateAttributeValueRequest extends FormRequest
 {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,6 +25,6 @@ class UpdateAttributeAPIRequest extends APIRequest
      */
     public function rules()
     {
-        return Attribute::$rules;
+        return AttributeValue::$rules;
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Attributable
  * @package App\Models
- * @version July 15, 2019, 7:24 am UTC
+ * @version July 17, 2019, 6:19 pm UTC
  *
  * @property \App\Models\Attribute attribute
  * @property 

@@ -1,13 +1,17 @@
 <div class="table-responsive-sm">
     <table class="table table-striped" id="attributes-table">
         <thead>
-            <th>Name</th>
+            <th>Attribute Group Id</th>
+        <th>Name</th>
+        <th>Permisson</th>
             <th colspan="3">Action</th>
         </thead>
         <tbody>
         @foreach($attributes as $attribute)
             <tr>
-                <td>{!! $attribute->name !!}</td>
+                <td>{!! $attribute->attribute_group_id !!}</td>
+            <td>{!! $attribute->name !!}</td>
+            <td>{!! $attribute->permisson !!}</td>
                 <td>
                     {!! Form::open(['route' => ['attributes.destroy', $attribute->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

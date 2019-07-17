@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class DeviceType
  * @package App\Models
- * @version July 14, 2019, 5:25 pm UTC
+ * @version July 17, 2019, 6:14 pm UTC
  *
  * @property string name
  */
@@ -45,12 +45,5 @@ class DeviceType extends Model
         'name' => 'required'
     ];
 
-    public function devices()
-    {
-        return $this->hasMany(\App\Models\Device::class, 'device_type_id', 'id');
-    }    
-
-    public function attributes() {
-        return $this->morphToMany(\App\Models\Attribute, 'attributable');
-    }
+    
 }

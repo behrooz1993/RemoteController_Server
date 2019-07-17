@@ -21,10 +21,14 @@ Route::group([
     Route::post('login', 'AuthAPIController@login')
         ->middleware('throttle.login');
     Route::post('verify', 'AuthAPIController@verify');
-    Route::post('complete-profile', 'AuthAPIController@completeProfile');
-    Route::post('tfa', 'AuthAPIController@secondFactor');
-    Route::get('refresh', 'AuthAPIController@refresh');
-    Route::get('logout', 'AuthAPIController@logout');
+    Route::group([
+        'middleware' => 'auth:api',
+    ], function($router) {
+        Route::post('complete-profile', 'AuthAPIController@completeProfile');
+        Route::post('tfa', 'AuthAPIController@secondFactor');
+        Route::get('refresh', 'AuthAPIController@refresh');
+        Route::get('logout', 'AuthAPIController@logout');
+    });
 });
 
 
@@ -39,24 +43,23 @@ Route::group([
 
 
 
-Route::resource('users', 'UserAPIController');
-
-Route::resource('sessions', 'SessionAPIController');
-
-Route::resource('device_types', 'DeviceTypeAPIController');
-
-Route::resource('devices', 'DeviceAPIController');
 
 
 
 
 
-Route::resource('attribute_groups', 'AttributeGroupAPIController');
 
 
 
-Route::resource('attributes', 'AttributeAPIController');
 
-Route::resource('attributables', 'AttributableAPIController');
 
-Route::resource('instances', 'InstanceAPIController');
+
+
+
+
+
+
+
+
+
+

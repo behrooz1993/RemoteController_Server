@@ -37,8 +37,8 @@
         "dbType": "integer:unsigned:default,0:foreign,device_types,id",
         "htmlType": "",
         "relation": "mt1,DeviceType,device_type_id,id",
-        "fillable": false,
-        "inForm": false,
+        "fillable": true,
+        "inForm": true,
         "searchable": true
     },
     {

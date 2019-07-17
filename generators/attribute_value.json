@@ -42,17 +42,7 @@
         "searchable": true
     },
     {
-        "name": "name",
-        "dbType": "string,200",
-        "htmlType": "text",
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "inForm": true,
-        "isIndex": true
-    },
-    {
-        "name": "name",
+        "name": "value",
         "dbType": "string,200",
         "htmlType": "text",
         "validations": "required",

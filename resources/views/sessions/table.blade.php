@@ -4,7 +4,6 @@
             <th>User Id</th>
         <th>Session</th>
         <th>Useragent</th>
-        <th>Fingerprint</th>
             <th colspan="3">Action</th>
         </thead>
         <tbody>
@@ -13,7 +12,6 @@
                 <td>{!! $session->user_id !!}</td>
             <td>{!! $session->session !!}</td>
             <td>{!! $session->useragent !!}</td>
-            <td>{!! $session->fingerprint !!}</td>
                 <td>
                     {!! Form::open(['route' => ['sessions.destroy', $session->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

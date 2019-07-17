@@ -2,6 +2,7 @@
     <table class="table table-striped" id="instances-table">
         <thead>
             <th>Device Id</th>
+        <th>User Id</th>
         <th>Mobile</th>
         <th>Serial</th>
             <th colspan="3">Action</th>
@@ -10,6 +11,7 @@
         @foreach($instances as $instance)
             <tr>
                 <td>{!! $instance->device_id !!}</td>
+            <td>{!! $instance->user_id !!}</td>
             <td>{!! $instance->mobile !!}</td>
             <td>{!! $instance->serial !!}</td>
                 <td>

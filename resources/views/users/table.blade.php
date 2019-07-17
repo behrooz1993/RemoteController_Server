@@ -6,6 +6,7 @@
         <th>Mobile</th>
         <th>Password</th>
         <th>Activation Code</th>
+        <th>Ttl</th>
         <th>Email</th>
             <th colspan="3">Action</th>
         </thead>
@@ -17,6 +18,7 @@
             <td>{!! $user->mobile !!}</td>
             <td>{!! $user->password !!}</td>
             <td>{!! $user->activation_code !!}</td>
+            <td>{!! $user->ttl !!}</td>
             <td>{!! $user->email !!}</td>
                 <td>
                     {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
